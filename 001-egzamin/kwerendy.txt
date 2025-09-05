@@ -1,0 +1,4 @@
+Kewrenda 1: select COUNT(*) from klienci;
+Kewrenda 2: SELECT klienci.Nazwisko, klienci.Imie, zamowienia.id, zamowienia.kod_koloru, zamowienia.pojemnosc, zamowienia.data_odbioru FROM klienci JOIN zamowienia ON klienci.Id = zamowienia.id_klienta order by zamowienia.data_odbioru;
+Kewrenda 3: SELECT klienci.Nazwisko, klienci.Imie, zamowienia.id, zamowienia.kod_koloru, zamowienia.pojemnosc, zamowienia.data_odbioru FROM klienci JOIN zamowienia ON klienci.Id = zamowienia.id_klienta WHERE zamowienia.data_odbioru >= "2021-11-05" AND zamowienia.data_odbioru <= "2021-11-07" ORDER BY zamowienia.data_odbioru;
+Kewrenda 4: SELECT klienci.Imie, klienci.Nazwisko FROM klienci WHERE klienci.Plec = "k";
