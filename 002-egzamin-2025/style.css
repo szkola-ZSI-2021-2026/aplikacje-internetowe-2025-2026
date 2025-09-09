@@ -1,0 +1,58 @@
+* {
+    font-family: Helvetica;
+}
+
+body {
+    background-color: lightsalmon;
+    text-align: center;
+}
+
+#top {
+    /* width: 30%; */
+    height: 400px;
+}
+
+#bottom {
+    background-color: darksalmon;
+    /* width: 30%; */
+    height: 100px;
+}
+
+#right {
+    background-color: darksalmon;
+    width: 70%;
+    height: 500px;
+    overflow: auto;
+}
+
+img {
+    width: 100%;
+}
+
+.scriptFilter {
+    font-size: 200%;
+    font-style: italic;
+    padding: 10px;
+}
+
+.scriptFilter:hover {
+    color: ghostwhite;
+}
+
+table, td {
+    border: 1px dotted maroon;
+}
+
+table {
+    width: 70%;
+    margin: auto;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+#main {
+    display: flex;
+}

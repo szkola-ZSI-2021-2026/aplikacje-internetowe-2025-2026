@@ -1,4 +1,4 @@
-Kwerenda 1: 
-Kwerenda 2: 
-Kwerenda 3: 
-Kwerenda 4: 
+Kwerenda 1: SELECT LOWER(wojewodztwa.nazwa) FROM wojewodztwa;
+Kwerenda 2: SELECT COUNT(miasta.nazwa) FROM miasta WHERE miasta.id_wojewodztwa=1;
+Kwerenda 3: SELECT miasta.nazwa, wojewodztwa.nazwa FROM wojewodztwa JOIN miasta ON miasta.id_wojewodztwa = wojewodztwa.id WHERE miasta.nazwa LIKE 'Lu%' ORDER BY miasta.nazwa;
+Kwerenda 4: SELECT wojewodztwa.nazwa, COUNT(miasta.nazwa) as 'Liczba miast' FROM wojewodztwa JOIN miasta ON wojewodztwa.id = miasta.id_wojewodztwa GROUP BY wojewodztwa.id;
