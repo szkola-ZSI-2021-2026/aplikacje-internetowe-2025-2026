@@ -20,7 +20,7 @@
             <label for="ldate">do: </label>
             <input type="date" name="ldate" id="ldate">
 
-            <input type="submit" value="Wyszukaj">
+            <input type="submit" value="Wyszukaj" name="WYSZUKAJ">
         </form>
     </section>
 
@@ -38,7 +38,7 @@
             <?php
             // skrypt 1
             $query;
-            if(isset($_POST["fdate"]) && isset($_POST["ldate"])) {
+            if(isset($_POST["fdate"]) && isset($_POST["ldate"]) && isset($_POST['WYSZUKAJ'])) {
                 $fdate = $_POST['fdate'];
                 $ldate = $_POST['ldate'];
                 // kwerenda 3 - formularz wypełniony
