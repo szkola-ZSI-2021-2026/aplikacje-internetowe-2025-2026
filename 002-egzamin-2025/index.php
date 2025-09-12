@@ -35,23 +35,30 @@
             <section id="right">
                 <h1>Wyniki wyszukiwania miast z uwzględnieniem filtra:</h1>
                 <!-- SKRYPT 1 -->
-            <table>
-                <tr>
-                    <th>Miasto</th>
-                    <th>Wojewodztwo</th>
-                </tr>
                 <?php
-                    $connection = mysqli_connect("localhost", "root", "", "wykaz");
 
-                    $query;
                     if(!empty($_POST['firstLetters'])) {
-                        echo "<p> $_POST[firstLetters] </p>";
+                        $connection = mysqli_connect("localhost", "root", "", "wykaz");
+
+                        echo "<p class='scriptFilter' > $_POST[firstLetters] </p>";
                         $query = "SELECT miasta.nazwa, wojewodztwa.nazwa FROM wojewodztwa JOIN miasta ON miasta.id_wojewodztwa = wojewodztwa.id WHERE miasta.nazwa LIKE '$_POST[firstLetters]%' ORDER BY miasta.nazwa;";
+
+                        $result = mysqli_query($connection, $query);
+
+                        echo "<table>";
+                        echo "<tr> <th> Miasto </th> <th> Wojewodztwo </th> </tr>";
+                        while($row = mysqli_fetch_row($result)) {   
+                            echo "<tr>";
+                            echo "<td> $row[0] </td>";
+                            echo "<td> $row[1] </td>";
+                            echo "</tr>";
+                        }
+                        echo "</table>";
+
+                        mysqli_close($connection);
                     }
 
-                    mysqli_close($connection);
                 ?>
-            </table>
             </section>
         </section>
     </main>
