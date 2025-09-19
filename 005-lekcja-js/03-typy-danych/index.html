@@ -49,6 +49,32 @@
 
         let num3 = 'abcd';
         console.log(num3 * 1); // Nan - Not a Number
+
+        // NUMBERs METODY
+        let num4 = 1351.127;
+        console.log(num4.toFixed(2));
+        // toFixed() zaokrągla do podenej ilości liczb po pzrecinku według praw matematytcznych
+        console.log(num4.toPrecision(7))
+        // toPrecision(X) zaokrągla, ale podajemy ile CYFR ma być w CAŁEJ LICZBIE
+        console.log(parseInt(num2));
+        // METODA konwertuje tekst(STRONG) na liczbę(INT)
+    </script>
+
+    <h2>boolean</h2>
+    <script>
+        const prawda = true;
+        const falsz = false;
+
+        console.log(prawda, falsz);
+        /*
+            To zawsze zwróci:
+            - false
+            - uindefined
+            - null
+            - 0
+            - Nan
+            - "" ''
+        */
     </script>
 </body>
 </html>
