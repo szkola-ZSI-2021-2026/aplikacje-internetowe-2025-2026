@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zmienne</title>
+</head>
+<body>
+    <h2>Deklarowanie zmiennych</h2>
+    <p>Słowa kluczowe</p>
+    <ul>
+        <li>var - stara metoda, nie stosujemy jej</li>
+        <li>let - zmienna</li>
+        <li>const - stała</li>
+    </ul>
+    <script>
+        // deklarowanie zmiennych i stalych - slowo kluczowe nazwa = wartosc;
+        var txt = "Ala ma kota";
+        var nr = 15;
+        var url = "strona.html";
+        console.log(txt);
+        let txt2 = "Przykladowy tekst";
+        txt2 = "Inny tekst";
+        console.log(txt2);
+        const nr2 = 100;
+        // nr2 = 2;
+    </script>
+    <h3>Nazewnictwo zmiennych</h3>
+    <ul>
+        <li>nazwa moze zawierac litery, cyfry, symbol podlogi</li>
+        <li>cyfra nie moze byc na poczatku</li>
+        <li>nie mozna uzywac slow kluczowych JS</li>
+        <li>wielkosc liter ma znaczenie</li>
+    </ul>
+    <h3>Różnice między <b>var</b> a <b>let/const</b></h3>
+    <ul>
+        <li>zasieg zmiennych, czyli gdzie zmienna jest widoczna</li>
+    <script>let a = 20; //zmienna globalna
+    {
+        let a = 30; //zmienna lokalna
+        console.log(a);
+    } 
+    console.log(a);
+    </script>
+        <li>var mozemy ponownie redeklarowac</li>
+        <script>
+            var txt ="Nowy tekst";
+            console.log(txt);
+        </script>
+        <li>hoisting</li>
+    </ul>
+    <h3>Konkatenacja i template string</h3>
+    <script>
+        let imie = "Basia";
+        let wiek = 21;
+        //konkatenacja
+        console.log("Cześć, jestem "+imie+" i mam "+wiek+" lat.");
+        //template string
+        console.log(`Cześć, jestem ${imie} i mam ${wiek} lat.`);
+    </script>
+
+    <h3>ZADANIE 1</h3>
+    <script>
+        // utwórz zmienną imie, klasa,kolor,przedmiot, następnie w konsoli umieść zdanie z wykorzystaniem konkatenacji i template stringa
+
+        let imie2 = 'Michał';
+        let klasa = '5A';
+        let przedmiot = 'Matematyka';
+        console.log("Mam na imie "+imie2+", i chodzę do klasy "+klasa);
+        console.log(`Moim ulubionym przediotem szkolnym jest ${przedmiot}`);
+    </script>
+</body>
+<script src="zadanie.js">
+    
+</script>
+</html>

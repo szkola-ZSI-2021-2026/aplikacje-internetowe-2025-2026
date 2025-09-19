@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Okna dialogowe</title>
+</head>
+<body>
+    <h1>Okna dialogowe</h1>
+    <p>służą do komunikacji z użytkownikiem i interakcji z nim</p>
+    <ol>
+        <li>alert()</li>
+        <li>confirm()</li>
+        <li>prompt()</li>
+    </ol>
+    <script>
+        alert("Jestem oknem informującym");
+        /*
+            - okno z komunikatem i przyciskiem OK
+            - nie zwraca żadnej wartości
+            - jedynie informuje o pewnym zdarzeniu
+            - nie można zmienić jego stylu
+        */
+       confirm("Jestem oknem decyzyjnym");
+       /*
+            - wymaga potwierdzenia od uzytkownika
+            - posiada 2 przyciski OK i Anuluj
+            - w zaleznosci od przycisku zwraca True lub False
+       */
+      prompt("Jestem oknem do wpisywania");
+      /*
+            - przyjmuje 2 parametry: tresc wiadomosci i opcjonalnie wartosc domyslna
+            - posiada dwa przyciski OK i Anuluj
+            - dla potwierdzenia zwraca wartosc wpisana przez uzytkownika lub gdy nie poda - wartosc domyslna, a w przypadku anulowania zwroci NULL
+      */
+    </script>
+</body>
+</html>

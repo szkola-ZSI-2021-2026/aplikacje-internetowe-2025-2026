@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dołączanie skryptów</title>
+    <!-- w sekcji HEAD -->
+     <!-- async - skrypt odpala jak tylko sie pobierze, nie czeka na HTML i nie dba o kolejnosc -->
+     <script src="script.js" async></script>
+     <!-- defer - skrypt odpala sie dopiero gdy HTML bedzie gotowy, zachowując kolejność -->
+     <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Dołączanie skryptów</h1>
+    <ul>
+        <li>w sekcji HEAD</li>
+        <li>w ciele dokumentu BODY</li>
+        <li>zewnętrze skrypt JS</li>
+        <li>osadzony skrypt w HTML</li>
+    </ul>
+    <!-- w ciele dokumenty BODY -->
+    <script>
+        // kod JS
+        console.log("Hello world!"); // wypisuje informacje w konsoli
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
