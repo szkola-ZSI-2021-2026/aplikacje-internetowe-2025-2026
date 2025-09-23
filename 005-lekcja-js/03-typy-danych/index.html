@@ -50,19 +50,19 @@
             zwraca TRUE jeżeli dany ciąg znaków jest w podanym ciągu znaków, zwraca FALSE jeśli dany ciąg znaków nie znajduje się w macierzyustym ciągu znaków
         
             replace()
-
+            zamienia pierwszy znaleziony ciąg znaków na inny ciąg znaków
         
             slice()
-        
-        
+            wyodrębnia text ze macierzystego tekstu i go wyświetla. Może przyjmować 1 bądź 2 argumenty. 
+            
             split()
-        
+            dzieli tekst na sekcje. Każda sekcja jest oddzielona wskazanym ciągiem znaków. Po podzieleniu, każda oddzielona sekcja string jest zapisywana do tablicy w odpowiedniej kolejności.
         
             toLowerCase()
-        
+            zmienia litery w małe na małe, nie przyjmuje argumentów
         
             toUpperCase()
-            zmienia litery małe na duże, przyjmuje parametr
+            zmienia litery w małe na duże, nie przyjmuje argumentów
         */
             
         const text1 = 'powiększ mnie!'
@@ -73,11 +73,41 @@
         const text6 = 'pies zamień każde słowo pies, na słowo kot pies'
         const text7 = 'podziel, ten, string, od, przecinków'
 
-        console.log('ZADANIE ----------------------');
-        console.log(text1.charAt(0));
+        console.log('ZADANIE -----------------------------');
+        console.log(text5.charAt(2));
         console.log(text4.includes('czy'));
         console.log(text6.replace('pies', 'kot'));
-        console.log();
+        console.log(text6.replaceAll('pies', 'kot')); // dodatkowe
+        console.log(text3.slice(6));
+        const words = text7.split(',');
+        console.log(words);
+        console.log(text2.toLocaleLowerCase());
+        console.log(text1.toUpperCase());
+        console.log('KONIEC ZADANIA ----------------------');
+
+        // concat() - łączy elementy podane jako elementy metody
+        let h = 'hello';
+        let w = 'world!';
+        let hw = h.concat(' ', w);
+        console.log('concat(): '+hw);
+
+        // indexOf() - zwraca index pierwszego wystepienia podanego fragmentu tekstu, w przeciwnym razie zwróci -1
+        let zdanie = 'Ala ma kota';
+        console.log('indexOf(): '+zdanie.indexOf('ma'));
+        console.log('indexOf(): '+zdanie.indexOf('pies'));
+
+        // startsWith() - sprawdza czy ciąg tekstowy zaczyna się od podanego fragmentu, zwraca true/false
+        let jezyk= 'Java Script';
+        console.log('startsWith(): '+jezyk.startsWith('Java'));
+
+        // endsWith() - sprawdza czy się tekstowy kończy się podanym fragmentem, zwraca true/false
+        let plik = 'programowanie.js';
+        console.log('endsWith(): ',plik.endsWith('.js'));
+
+        // toString() - zamienia wartość INT na string i zwraca ją
+        let abc = 123;
+        console.log('toString(): '+ abc.toString());
+        console.log('toString(): '+typeof abc.toString());
 
     </script>
 
