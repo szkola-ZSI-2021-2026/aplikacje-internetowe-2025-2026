@@ -35,13 +35,43 @@ x-=10;  // 4
 x *= 3; // 9
 x--;    // 9
 x /= 4; // 2
-console.log('x = '+x);
+console.log('x po modyfikacjach = '+x);
 
+console.log('------ OPERATORY PORÓWNANIA --------'); // zwracają wartość logiczną true/false
 
+console.log(10 == '10');
 
+console.log(10 === '10'); // sprawdza wartość i typ
 
+console.log(10 !== '10'); // sprawdza wartość i typ
 
+console.log(10 != '10'); // sprawdza wartość i typ
 
+console.log(10 < 5); // <=
+
+console.log(10 > 5); // >=
+
+console.log('------ OPERATORY LOGICZNE --------'); 
+// AND &&
+// OR ||
+// XOR ^
+// NOT !
+
+let a = 5;
+let b = 7;
+// and
+console.log(5 & 7);
+console.log(1 & 1);
+console.log(100 & 300);
+
+// or
+console.log(0 || 0);
+
+// xor
+console.log(1 ^ 0);
+
+// not
+console.log(!1);
 
 
 
