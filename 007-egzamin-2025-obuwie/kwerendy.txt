@@ -1,0 +1,4 @@
+Kwerenda 1: SELECT model FROM produkt;
+Kwerenda 2: SELECT produkt.model, buty.nazwa, buty.cena, produkt.nazwa_pliku FROM buty INNER JOIN produkt ON buty.model = produkt.model;
+Kwerenda 3: SELECT buty.nazwa, buty.cena, produkt.kolor, produkt.kod_produktu, produkt.material, produkt.nazwa_pliku FROM buty INNER JOIN produkt ON buty.model = produkt.model WHERE buty.model='P-09-03';
+Kwerenda 4: INSERT INTO kategorie VALUES ('','Sandały');
