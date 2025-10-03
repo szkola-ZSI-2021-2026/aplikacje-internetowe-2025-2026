@@ -13,18 +13,18 @@
 
     <main>
         <form action="zamow.php" method="post">
-            <label for="Model">Model: </label>
-            <select name="Model" id="Model">
-                <option value="test">test</option>
+            <label for="model">Model: </label>
+            <select name="model" id="model">
+                <!-- <option value="test">test</option> -->
                 <?php
                 // skrypt 1
                     $connection = mysqli_connect("localhost", "root", "", "obuwie_mm");
                 
                     $query1 = "SELECT model FROM produkt;";
 
-                    $result = mysqli_query($query1, $connection);
+                    $result1 = mysqli_query($connection, $query1);
 
-                    while ($row = mysli_fetch_row($result)) {
+                    while ($row = mysqli_fetch_row($result1)) {
                         echo "<option value='$row[0]'>";
                         echo "$row[0]";
                         echo "</option>";
@@ -32,20 +32,35 @@
                 ?>
             </select>
 
-            <label for="Rozmiar">Rozmiar: </label>
-            <select name="Rozmiar" id="rozmiar">
+            <label for="rozmiar">Rozmiar: </label>
+            <select name="rozmiar" id="rozmiar">
                 <option value="40">40</option>
                 <option value="41">41</option>
                 <option value="42">42</option>
                 <option value="43">43</option>
             </select>
 
+            <label for="amount_of_pairs">Liczba par: </label>
+            <input type="number" id="amount_of_pairs" name="amount_of_pairs">
+
             <input type="submit" value="Zamów">
         </form>
 
         <?php
         // skrypt 2
-        
+            $query2 = "SELECT produkt.model, buty.nazwa, buty.cena, produkt.nazwa_pliku FROM buty INNER JOIN produkt ON buty.model = produkt.model;";
+
+            $result2 = mysqli_query($connection, $query2);
+
+            while($row = mysqli_fetch_row($result2)) {
+                echo "<div class='control'>";
+                echo "<img src='$row[3]' alt='but męski'>";
+                echo "<h2> $row[1] </h2>";
+                echo "<h5> Model: $row[0] </h5>";
+                echo "<h4> Cena: $row[2] </h4>";
+                echo "</div>";
+            }
+            
             mysqli_close($connection);
         ?>
     </main>
