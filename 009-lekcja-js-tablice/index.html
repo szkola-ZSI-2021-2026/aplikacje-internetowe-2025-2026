@@ -105,7 +105,67 @@
         let slowo = 'kajak'; // palindrom - słowo od przodu i tyłu to to samo słowo
         let tabSlowo = [...slowo];
         console.log(tabSlowo.join('') === tabSlowo.toReversed().join('')); 
+    </script>
+
+    <h4>Wyszukiwanie elementów</h4>
+    <script>
+        
+        // indexOf(element) - sprawdza pod którym indeksem jest podany element tablicy; jeśli go nie ma zwraca -1
+        //lastIndexOf(element) - sprawdza, pod którym indeksem jest podany element tablicy i zwraca jego ostatnie wystąpienie. Jesli go nie ma zwraca -1
+        // icludes(element) - sprawdza czy tablica zawiera szukany element i zwraca wartość logiczną.
+        
+        console.log(imiona);
+        console.log(imiona.indexOf('Tomek'));
+        console.log(imiona.indexOf('Basia'));
+
+        let szukanaWartosc = 'Roman';
+        if(imiona.indexOf(szukanaWartosc) == -1) {
+            console.log('Szukana wartość nie występuje w tablicy');
+        } else {
+            console.log('Szukana wartość występuje w tablicy na indeksie: '+imiona.indexOf(szukanaWartosc));
+        }
+    </script>
+
+    <h4>Sortowanie tablic</h4>
+    <script>
+        
+        // sort(funkcjaSortująca) - służy do sortowania tablic; elementy tablicy traktowane są jako tekst, dlatego sortowanie nie działa poprawie na liczbach; Aby sortowanie działało poprawnie trzeba stworzyć funkcje sortującą; METODA DESTRUKCYJNA!!!
+
+        let liczby = [1,2.3,23,34,3.7,2.5,10];
+        console.log(liczby.sort()); // fail
+
+        console.log(imiona.toSorted()); 
+        console.log(imiona); // METODA NIE DESTRUKCUJNA 
+
+        console.log(imiona.sort()); // ok
+        console.log(imiona); // METODA DESTRUKCUJNA
 
     </script>
+
+    <h4>Metoda slice() i splice()</h4>
+    <script>
+
+        // slice(od, do) - zwraca kawałek tablicy od - do, gdzie parametr do jest opcjonalny, czyli od to indeks od którego mamy wyciąć, a do to do jakiego bedziemy ciąć
+        console.log(imiona.slice(0,1));
+        console.log(imiona.slice(3));
+        console.log(imiona.slice(1,4));
+        console.log(imiona.slice(-3));
+        console.log(imiona.slice(2,-1));
+
+        // splice(index, ileUsunąć, nowyElement) - służy do usuwania jak i do wstawiania nowych elementów tablicy
+        // - index - określa miejsce w tablicy
+        // - ileUsunąć - określa ile elementów usunąć
+        // - nowyElement (opcjonalny) - wstawia nowy element przed danym miejscem w tablicy
+        console.log(imiona);
+        console.log(imiona.splice(2,1));
+        console.log(imiona); // METODA DESTRUKCUJNA
+        console.log(imiona.splice(1,0, 'A')); // po pierwszym indeksie wstawione zostało 'A' bez usuwania niczego
+        console.log(imiona);
+
+        
+        
+
+    </script>
+
 </body>
 </html>
