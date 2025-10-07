@@ -161,11 +161,56 @@
         console.log(imiona); // METODA DESTRUKCUJNA
         console.log(imiona.splice(1,0, 'A')); // po pierwszym indeksie wstawione zostało 'A' bez usuwania niczego
         console.log(imiona);
+        console.log(imiona.splice(-2,2));
+        console.log(imiona);
+        console.log(imiona.splice(1,1));
+        console.log(imiona);
 
-        
-        
+        // toSpliced() - metoda niedestrukcujna
+        console.log(imiona.toSpliced(2,1));
+        console.log(imiona);
 
     </script>
 
+    <h4>Pętla for...of</h4>
+    <script>
+        
+        // for...of - przed of ustanawiamy nowązmienną, która przyjmie pojedynczy element z tablicy, a za of nazwe tablicy
+        for (let element of liczby) {
+            console.log(element)
+        }
+
+        // pętlą for...of wyświetl liczby z tablicy liczby przemnożone przez 2
+        console.log('================ ZADANIE =========');
+        for (let element of liczby) {
+            console.log(element * 2)
+        }
+
+    </script>
+
+    <h4>Tablice wielowymiarowe</h4>
+    <script>
+
+        let tabM = [
+            [0,1,2],
+            [3,4,5],
+            [6,7,8]
+        ]; // tablice dwuwymiarowa
+
+        console.log(tabM[1][0]);
+        tabM[2][1] = 'X';
+        console.log(tabM);
+
+        let dane = [
+            ['Marcin', 185, 90, 'czarny'],
+            ['Agnieszka', 170, 65, 'rozowy']
+        ];
+        console.log(`
+            imie: ${dane[1][0]}
+            wzrost: ${dane[1][1]}
+            waga: ${dane[1][2]}
+            ulubiony kolor: ${dane[1][3]}
+        `);
+    </script>
 </body>
 </html>
