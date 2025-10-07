@@ -48,12 +48,64 @@
 
     <h4>Dodawanie i usuwanie elementów tablicy</h4>
     <script>
-        //push() - 
-        //pop() - 
-        //unshift() - 
-        //shift() - 
+        //push(nowyElement, ...) - dodaje nowy element na końcu tablicy i zwraca ilość jeje elementów 
+        //pop() - usuwa ostatni element z tablicy i zwraca jego wartość
+        //unshift() - dodaje elementy na początku tablicy i zwraca długość tablicy
+        //shift() - usuwa element z początku tablicy i zwraca jego wartość
 
+        let imiona = ['Roman','Tomek','Zbyszek','Piotr'];
+        console.log(imiona.push('Marek', 'Marcin'));
+        console.log(imiona);
+
+        imiona[6] = 'Bogdan';
+        console.log(imiona);
+
+        console.log(imiona.pop());
+        console.log(imiona.pop());
+        console.log(imiona);
+
+        console.log(imiona.unshift('Mateusz'));
+        console.log(imiona.unshift('Kuba'));
+        console.log(imiona);
+
+        console.log(imiona.shift());
+        //console.log(imiona.shift());
+        console.log(imiona);
     </script>
 
+    <h4>Tablica jako string</h4>
+    <script>
+
+        // join(separator) - zamienia tablice w string oddzielejąć pojedyncze elementy w tablicy podanym separatorem, jeżeli nic nie będzie podane to domyślenie elementy zostaną oddzielone przecinkiem (,)
+        console.log(imiona.join('   -   ')); 
+        console.log(typeof imiona.join()); 
+
+        //zliczenie liczby znaków w tablicy
+        console.log(imiona.join('').length);
+
+        let text = 'rewolwer';
+        let tabText = [...text]; //spread
+        console.log(tabText);
+
+        // split(separator) - dzieli string separatorem na elementy i zwraca tablicy
+        let text2 = 'Ala ma kota';
+        let tabText2 = text2.split(' ');
+        console.log(tabText2);
+    </script>
+
+
+    <h4>Odwrotność</h4>
+    <script>
+        // reverse() - służy do odwracania kolejności elementów w tablicy. Zmienia podaną tabelę.
+        console.log(tabText2.reverse());
+        console.log(tabText2); // METODA DESTRUKCYJNA - zmienia oryginalną tablice
+        console.log(tabText2.toReversed()); // METODA NIE DESTRUKCUJNA - nie wpływa na podaną tablice
+        console.log(tabText2);
+
+        let slowo = 'kajak'; // palindrom - słowo od przodu i tyłu to to samo słowo
+        let tabSlowo = [...slowo];
+        console.log(tabSlowo.join('') === tabSlowo.toReversed().join('')); 
+
+    </script>
 </body>
 </html>
