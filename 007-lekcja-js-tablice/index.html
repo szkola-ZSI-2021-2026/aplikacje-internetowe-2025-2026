@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Tablice</h1>
+    <script>
+
+        let tab = ['Ala','ma','czarnego','kota'];
+
+        console.log(tab[0]);
+
+        /*
+         at()
+         służy do odwołania się do elementu na podanym indeksie
+        */
+
+        console.log(tab.at(3));
+        console.log(tab.at(2));
+
+    </script>
+
+    <h4>Właściwość length</h4>
+    <script>
+
+        // length - zwraca ilość elementów w tablicy
+        console.log(tab.length);
+        console.log(tab[tab.length-1]);
+    
+        console.log('PEŁTLA FOR + LENGTH ==============');
+        for (let i = 0; i < tab.length; i++) {
+            console.log(tab[i]);            
+        }
+
+    </script>
+
+    <h4>Czy tablica jest tablicą</h4>
+    <script>
+        // isArray(tablica) - zwraca wartosc logiczną, czy struktura jest tablicą
+
+        console.log(Array.isArray(tab));
+        console.log(typeof tab);
+    </script>
+
+    <h4>Dodawanie i usuwanie elementów tablicy</h4>
+    <script>
+        //push() - 
+        //pop() - 
+        //unshift() - 
+        //shift() - 
+
+    </script>
+
+</body>
+</html>
