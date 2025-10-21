@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Funckcje</h1>
+    <ul>
+        <li>funckje budowane</li>
+        <li>funckje matematyczne</li>
+        <li>funckje własne</li>
+    </ul>
+
+    <script>
+        console.log("--- OBIEKT MATH ---");
+
+        let liczba1 = 10;
+        let liczba2 = 5;
+        console.log(`Wartość bezwzględna: ${Math.abs(-7)}`);
+        console.log(`Zaokrąglanie: ${Math.round(3.14)}`);
+        console.log(`Zaokrąglanie w góre: ${Math.ceil(3.14)}`);
+        console.log(`Zaokrąglanie w dół: ${Math.floor(3.14)}`);
+        console.log(`Obcinanie części ułamkowej: ${Math.trunc(5.9)}`);
+        console.log(`Największa liczba: ${Math.max(liczba1,liczba2,11,3)}`);
+        console.log(`Największa liczba: ${Math.min(liczba1,liczba2,11,3)}`);
+        console.log(`Potęgowanie: ${Math.pow(2,liczba2)}`);
+        console.log(`Pierwiastek stopnia drugiego: ${Math.sqrt(2)}`);
+
+        // przykład stałej predefiniowanej
+        console.log(Math.PI);
+        // zaokrąglenie liczby PI do 3 miejsc po przecinku
+        console.log(Math.round((Math.PI)*1000)/1000);
+        // liczby pseudolosowe
+        console.log(`Liczby pseudolosowe: ${Math.random()}`); // losuje liczby z przedziału <0;1>
+        console.log(`Losowanie 0 - 10: ${Math.round(Math.random()*10)}`);
+        console.log(`Losowanie 1 - 11: ${Math.round(Math.random()*10+1)}`);
+        console.log(`Losowanie 0 - 100: ${Math.round(Math.random()*100)}`);
+
+        console.log("--- Losowanie w przedziale ---");
+        let min = 3;
+        let max = 7;
+        let losowanie = Math.floor(Math.random()*(max-min+1)+min);
+        // Math.random() * 5 (ilosc możliwych liczb + 3) (liczba minimalna)
+        console.log(losowanie);
+
+
+        console.log("--- FUNKCJE WŁASNE ---");
+        // tworzenie funkcji
+        function witaj(a1) {
+            console.log(`Witaj ${a1}`);
+        }
+        witaj('Michal');
+
+        // parametry fukcji
+        function powiedzCzesc(imie) {
+            console.log(`Czesc ${imie}`);
+        }
+
+        powiedzCzesc(); // brak argumentu - undefined
+        powiedzCzesc('Michal'); 
+        powiedzCzesc('Ola'); 
+        powiedzCzesc('Kasia'); 
+        //powiedzCzesc(imie); // zmienna IMIE istnieje tylko w ciele funkcji, nie jest zmienną globalną
+        
+        // domyślne wartości
+        function powitaj(imie = 'nieznajomy') {
+            console.log(`Witaj ${imie}`);
+        }
+
+        powitaj();
+        powitaj('Michal');
+        // zwracanie wartości - return
+
+        function dodaj(l1, l2) {
+            return l1 + l2; // return kończy działanie pętli
+        }
+
+        console.log(dodaj(5,4));
+        console.log(dodaj(5,-9));
+        console.log(dodaj(51,14));
+        let a = 20;
+        let b = 30;
+        console.log(dodaj(a,b));
+        let wynik = dodaj(a,b);
+        console.log('Wynik dodawania: '+a+' i '+b+' = '+wynik);
+
+        // stwórz funkcję która wypiszę imie  tak aby Pierwsza litera była duża
+        function firstBig(imie) {
+            return imie.charAt(0).toUpperCase()+imie.slice(1);
+        }
+        console.log(firstBig('gosia'));
+        console.log(firstBig('michal'));
+        console.log(firstBig('karol'));
+
+
+        // console.log(obliczPole(10,3)); // błąd bo ta zmienna funkcja nie istnieje i hoisting nie działa
+        // wyrażenie funkcyjne i funkcje anonimowe !!!!!!!!!!!!!!!!!!!
+        let obliczPole = function(a,b) { 
+            return a * b 
+        };
+        console.log(obliczPole(2,2));
+        console.log(obliczPole(10,3));
+
+
+
+
+
+    </script>
+</body>
+</html>
