@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1. Stworz zwykla funkcje czyPatrzysta(liczba), ktora zwraca wartosc logiczna, czy liczba jest parzysta czy nie.
+        console.log('ZADANIE 1');
+        function czyParzysta(liczba) {
+            return liczba % 2 == 0;
+        }
+        console.log(czyParzysta(1));
+        console.log(czyParzysta(0));
+
+        // 2. Stworz zwykla funkcje poteguj(baza, wykladnik), ktora zwraca  wynik - uzyj funkcji matematycznej
+        console.log('ZADANIE 2');
+        function poteguj(baza, wykladnik) {
+            return Math.pow(baza,wykladnik);
+        }
+        console.log(poteguj(2,5));
+
+        // 3. Stworz funkcje strzalkowa liczZnaki(tekst), ktora zwraca dlugosc tekstu.
+        console.log('ZADANIE 3');
+        let liczZnaki = tekst => {
+            return tekst.length;
+        }
+        console.log(liczZnaki('123456'));
+
+        // 4. Stworz funkjce strzalkowa losujLiczbe(liczba1, liczba2), ktora zwraca losowa liczbe calkowita z podanego zakresu.
+        console.log('ZADANIE 4');
+        let losujLiczbe = (liczba1, liczba2) => {
+            return Math.floor(Math.random()*(liczba2-liczba1+1)+liczba1);
+        }
+        console.log(losujLiczbe(1,10));
+
+        // 5. Stworz funkcje strzalkowa kantorEuro(euro), ktora zwroci przelicznik euro na zlotowki, zaokraglajac do 2-och liczb po przecinku
+        console.log('ZADANIE 5');
+        let kantorEuro = euro => {
+            przelicznik = 4.311232;
+            return Math.round((euro * przelicznik)*100)/100;
+        }
+        console.log(kantorEuro(5));
+
+        // 6. Stworz funkjce strzalkowa losujParzyste(min, max, n), ktora tworzy tablice n losowych liczb parzystych z danego zakresu
+        console.log('ZADANIE 6');
+        let losujParzyste = (min, max, n) => {
+            let array = [];
+            let wylosowanaLiczba;
+            for(let i = 0; i < n;) {
+                wylosowanaLiczba = Math.floor(Math.random()*(max-min+1)+min);
+                if(wylosowanaLiczba % 2 == 0) {
+                    array[i] = wylosowanaLiczba;
+                    i++;
+                }
+            }
+            console.log(array);
+        }
+        losujParzyste(0,100,10);
+
+    </script>
+</body>
+</html>

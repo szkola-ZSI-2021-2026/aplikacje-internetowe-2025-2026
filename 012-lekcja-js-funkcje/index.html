@@ -104,9 +104,35 @@
         console.log(obliczPole(10,3));
 
 
+        console.log('--- FUNKCJE STRZALKOWE ---');
+        // funkcja strzałkowa - zapis skrócony - zamienia słowo function na strzałkę
+        let poleKwadratu = a => a * a;
+        // jeżeli funkcja strzałkowa 
+            // ma więcej niż jeden parametr to trzeba je ująć w okrągłe nawiasy
+            // nie posiada parametrów musimy dać pusty (); 
+        console.log(poleKwadratu(4));
 
 
+        //stwórz 3 funkcje strałkowe
+            // 1. różnica dwóch liczba
+            // 2. podwojenie liczby
+            // 3. powitanie z parametrem
+        let roznica = (a,b) => {
+            return a - b;
+        }
+        console.log(roznica(1,2));
+        let podwojenieLiczby = a => {
+            return 2 * a;
+        }
+        console.log(podwojenieLiczby(3));
+        let powitanieZparametrem = a => {
+            return 'Witaj '+a;
+        }
+        console.log(powitanieZparametrem('Michal'));
 
+        console.log('----------- ZADANIA --------------');
+
+        
     </script>
 </body>
 </html>
