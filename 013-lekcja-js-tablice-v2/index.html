@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaawansowane tablice</title>
+</head>
+<body>
+    
+    <h1>Zaawansowane metody tablicowe</h1>
+    <script>
+        // przemieszczanie sie po tablicy petląfor
+        let tabImiona = ['Marcin', 'Monika', 'Magda', 'Maja', 'Mateusz'];
+        for(let i = 0; i < tabImiona.length; i++) {
+            console.log(i+1 + '. ' + tabImiona[i]);
+        }
+
+        // forEach() - metoda służąca do przemieszczania sie po tablicy
+            // - pierwszy parametr wskazuje na dany element w tablicy
+            // - drugi element wskazuje na indeks elementu (opcjonalny)
+            // - trzeci wskazuje na aktualną tablicę (opcjonalny)
+        // forEach nie zwraca nowej tablicy
+        // pod zmienną el trafiają kolejne elementy tablicy
+        tabImiona.forEach(el =>{
+            console.log(el.toUpperCase())
+        });
+        // pod zmienną i będzie stawiany indeks elementu
+        tabImiona.forEach((el, i) => {
+            console.log("["+i+"] "+el);
+        });
+        tabImiona.forEach((el, i , array) => {
+            console.log(`Index: ${i}, a długość tablicy: ${array.length}`);
+        });
+
+        // ZADANIE
+        // stwórz tablice liczby z 5 elementami całkowitymi i wypisz forEach'em "Element [index]: [liczba]"
+        tabLiczby = [22,4,7,13,10, -1];
+        tabLiczby.forEach((el, i, array) => {
+            console.log(`Element ${i}: ${array[i]}`);
+        });
+
+        // Metoda every() - sprawdza, czy każdy element spełnia dany warunek i zwraca wartość logiczną
+        let czyParzyste = tabLiczby.every(liczba => {
+            return liczba % 2 == 0;
+        })
+        console.log(`czy wszystkie liczby w tablicy sąparzyste ${czyParzyste}`);
+
+        //Metoda some()- sprawdza czy chociarz jeden element z tablicy spełnia dany warunek, wartosc logiczną
+        let tabZwierzeta = ['Kot','pies','jeż','chomik'];
+        let trzyLitery = tabZwierzeta.some(zwierze => {
+            return zwierze.length >= 3;
+        });
+        console.log('Czy jest zierze, które ma 3 lub więcej znaków: '+trzyLitery);
+
+        //Metoda map() - przemieszcza się po tablicy i zwraca nowy element tablicy; tworzy nową tablicę
+        let tabDuzeImiona = tabImiona.map(imie => {
+            return imie.toUpperCase();
+        });
+        console.log(tabDuzeImiona);
+
+        let podwojeoneLiczby = tabLiczby.map(liczba => {
+            return liczba * 2;
+        });
+        console.log(podwojeoneLiczby);
+
+        function razy3(liczba) {
+            return liczba * 3;
+        }
+        console.log(tabLiczby.map(razy3));
+        console.log(tabLiczby);
+
+        //Metoda filter() - zwraca tylko te elementy, które pasują do danego warunku
+        let ujemneLiczby = tabLiczby.filter(liczba => {
+            return liczba < 0;
+        });
+        console.log(ujemneLiczby);
+
+        // zmodyfikuj tabele liczby - zwróć z niej elementy, które są w przedziale <5;10>
+        let miedzy5i10 = tabLiczby.filter(liczba => {
+            return liczba >= 5 && liczba <= 10;
+        });
+        console.log(miedzy5i10);
+
+        //Metoda recude() - wykonuje operacje na tablicy redukując ją do jednego wyniku
+        let wynikDodawania = tabLiczby.reduce((prev, curr) => prev + curr);
+        // iteracja 1 => prev = 0, curr = 22
+        // iteracja 2 => prev = 22, curr = 4
+        // iteracja 3 => prev = 26, curr = 7
+        // iteracja 4 => prev = 33, curr = 13
+        // iteracja 5 => prev = 46, curr = 10
+        // iteracja 6 => prev = 56, curr = -1
+        // wynik = 55
+        console.log(wynikDodawania);
+
+
+        //Metoda find() - zwraca pierwszy pojedynczy element, a nie tablice, który pasuje do warunku i przestaje szukać; jeśli nie ma pasującego zwraca "undefined"
+
+        // znalezienie pierwszej liczby większej od 5
+        let wiekszaod5 = tabLiczby.find(liczba => {
+            return liczba > 5;
+        });
+        console.log(wiekszaod5);
+    </script>
+
+</body>
+</html>
