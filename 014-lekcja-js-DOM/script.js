@@ -107,18 +107,33 @@ const btn1 = document.querySelector('.btn-click');
 const btn2 = document.querySelector('.btn-mouse');
 const btn3 = document.querySelector('.btn-dblclick');
 
-const klinij = () => console.log('Kliknięto mnie');
+const kliknij = () => console.log('Kliknięto mnie');
 const najedz = () => console.log('Najechano mnie');
 const kliknijPodwojnie = () => console.log('Kliknięto mnie podwójnie');
 
-function test() {
-    console.log('TEST');
+function wszystkiePrzyciski() {
+    console.log('Uruchomiono funkcje dla wszystkich przycisków');
 }
 
-btn1.addEventListener('click', klinij);
-btn1.addEventListener('click', test);
+btn1.addEventListener('click', kliknij); 
 btn2.addEventListener('mouseover', najedz);
 btn3.addEventListener('dblclick', kliknijPodwojnie);
 
+// Co jeśli chcemy nasłuchiwać wszystkich przycisków
+const przyciski = document.querySelectorAll('button');
+przyciski.forEach(przycisk => {
+    przycisk.addEventListener('click', wszystkiePrzyciski);
+});
 
 
+
+console.log('--- Stylowanie elementów w JS ---');
+const stylDiv = document.querySelector('.styl');
+stylDiv.style.backgroundColor = 'gold';
+stylDiv.style.color = '#000';
+stylDiv.style.padding = '10px';
+stylDiv.style.border = '1px solid white';
+stylDiv.style.borderRadius = '10px';
+stylDiv.style.textTransform = 'uppercase';
+stylDiv.style.textAlign = 'center';
+// <obiekt> . style . <właściwość CSS> = <wartość>
