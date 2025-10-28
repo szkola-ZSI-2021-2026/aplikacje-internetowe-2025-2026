@@ -12,3 +12,27 @@ body {
 .elem {
     color: lime;
 }
+
+.przyciski {
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    /* gap: 20px; */
+}
+
+button {
+    border: 1px solid black;
+    width: 200px;
+    height: 50px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: transparent;
+    color: white;
+    transition: all 0.2s case-in-out;
+}
+
+button:hover {
+    box-shadow:  5px 5px 10px lime;
+}

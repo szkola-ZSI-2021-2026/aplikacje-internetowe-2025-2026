@@ -33,7 +33,6 @@ console.log(tagLi2); // NodeList
 // HTMLCollection to żywa kolekcja, która przechowuje elementy, które zostały stworzone dynamicznie
 // NodeList przechowuje elementy istniejące "w pliku HTML"
 
-
 // ZADANKO 1
 let header = document.querySelector('h2');
 console.log(header);
@@ -46,7 +45,6 @@ console.log(blokDiv);
 
 let blokDiv_p = blokDiv.querySelector('#akapit'); // zawężenie poszukiwać
 console.log(blokDiv_p);
-
 
 console.log("--- Tworzenie i dodawanie dynamicznych elementów na stronie ---");
 const ulList = document.createElement('ul');
@@ -74,7 +72,6 @@ listItem2.innerHTML = '<u>2 krotnie zmienoniy tekst text (innerHTML) </u>'; // z
 
 console.log(listItem2.innerHTML);
 
-
 /* 
     stworz diva w JS, następnie w nim utwórz p, do którego dodasz tekst "dodany paragraf"
 */
@@ -82,7 +79,46 @@ const div1 = document.createElement('div');
 const div1_paragraf = document.createElement('p');
 document.body.appendChild(div1);
 div1.appendChild(div1_paragraf);
-div1_paragraf.innerHTML = 'dodany paragraf';
+div1_paragraf.innerHTML = "<i style='color:pink'> dodany paragraf </i>";
+
+console.log('--- Usuwanie elementów ---');
+const delP = document.querySelector('#del');
+blokDiv.removeChild(delP);
+
+console.log('--- Zastępowanie elementów ---');
+const div2 = document.createElement('div');
+const oldP = document.createElement('p');
+oldP.textContent = 'Stary tekst';
+document.body.appendChild(div2);
+div2.appendChild(oldP);
+
+const newP = document.createElement('p');
+newP.textContent = 'Nowy tekst';
+
+// rodzic.replaceChild(nowe, stare) - zastępuje rodzicowi nowym dzieckiem stare
+div2.replaceChild(newP, oldP);
+
+console.log('--- addEventListener ---');
+// addEventListener() - metoda w JS, która w momencie wystąpienia zdarzenia wysołuje funkcje, powinny znajdować się na końcu pliku
+
+// addEl możemy nadawać na dokument, window i pojedynczy element na stronie
+
+const btn1 = document.querySelector('.btn-click');
+const btn2 = document.querySelector('.btn-mouse');
+const btn3 = document.querySelector('.btn-dblclick');
+
+const klinij = () => console.log('Kliknięto mnie');
+const najedz = () => console.log('Najechano mnie');
+const kliknijPodwojnie = () => console.log('Kliknięto mnie podwójnie');
+
+function test() {
+    console.log('TEST');
+}
+
+btn1.addEventListener('click', klinij);
+btn1.addEventListener('click', test);
+btn2.addEventListener('mouseover', najedz);
+btn3.addEventListener('dblclick', kliknijPodwojnie);
 
 
 
