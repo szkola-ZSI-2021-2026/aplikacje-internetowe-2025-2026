@@ -1,0 +1,14 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #333;
+    color: white;
+    font-size: larger;
+}
+
+#el2 {
+    color: red;
+}
+
+.elem {
+    color: lime;
+}
