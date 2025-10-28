@@ -6,8 +6,8 @@ console.log(text);
 
 
 console.log('Zadanie 2');
-let imie = 'Michał';
-let nazwisko = 'Mleczko';
+let imie = 'Imie';
+let nazwisko = 'Nazwisko';
 if(imie.length + nazwisko.length > 10) {
     console.log(imie.toUpperCase() + ' ' + nazwisko.toUpperCase());
 } else {
