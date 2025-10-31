@@ -1,0 +1,22 @@
+button {
+    padding: 10px;
+}
+
+h1 {
+    color: black;
+}
+
+.color1 {
+    background-color: greenyellow;
+    text-transform: uppercase;
+}
+
+.color2 {
+    background-color: tomato;
+    font-style: italic;
+}
+
+.color3 {
+    background-color: royalblue;
+    letter-spacing: 5px;
+}
