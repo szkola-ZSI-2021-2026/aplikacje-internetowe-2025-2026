@@ -137,3 +137,6 @@ stylDiv.style.borderRadius = '10px';
 stylDiv.style.textTransform = 'uppercase';
 stylDiv.style.textAlign = 'center';
 // <obiekt> . style . <właściwość CSS> = <wartość>
+
+
+
