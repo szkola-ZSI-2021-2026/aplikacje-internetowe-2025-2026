@@ -1,0 +1,4 @@
+kewrenda 1: SELECT farby.cena, farby.pojemnosc FROM farby WHERE farby.kolor = 'czerwony';
+kewrenda 2: 
+kewrenda 3: 
+kewrenda 4: 
