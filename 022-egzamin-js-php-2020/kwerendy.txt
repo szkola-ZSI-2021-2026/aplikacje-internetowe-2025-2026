@@ -1,0 +1,30 @@
+Kwerenda 1:
+CREATE TABLE zamowienia
+(
+    id INT unsigned NOT null,
+    imie text DEFAULT null,
+    nazwisko text DEFAULT null,
+    adres_email text DEFAULT null,
+    liczba_choinek int DEFAULT null,
+    liczba_mikolajow int DEFAULT null,
+    liczba_reniferow int DEFAULT null,
+    info boolean DEFAULT null
+);
+CREATE TABLE zamowienia ( id INT unsigned NOT null, imie text DEFAULT null, nazwisko text DEFAULT null, adres_email text DEFAULT null, liczba_choinek int DEFAULT null, liczba_mikolajow int DEFAULT null, liczba_reniferow int DEFAULT null, info boolean DEFAULT null );
+
+
+
+Kwerenda 2:
+ALTER TABLE zamowienia ADD PRIMARY KEY (id);
+
+
+Kwerenda 3:
+CREATE USER 'klient'@'localhost' identified by 'klient123';
+
+
+Kwerenda 4:
+Grant insert on sklep_mm.* TO 'klient'@'localhost';
+
+
+Kwerenda 5:
+insert into zamowienia ( id, imie, nazwisko, adres_email ) VALUES ( 0, 'Jan', 'Kowalski', 'jKowalski@poczta.pl' );
