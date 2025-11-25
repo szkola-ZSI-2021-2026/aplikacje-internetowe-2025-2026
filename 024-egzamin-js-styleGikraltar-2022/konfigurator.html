@@ -16,23 +16,24 @@
         <button id="olive">Olive</button>
     
         <p>Podaj kolor czcionki</p>
-        <select name="fontColor" id="fontColor">
-            <option value="white">White</option>
-            <option value="tan">Tan</option>
-            <option value="bisque">Bisque</option>
-            <option value="plum">Plum</option>
+        <select name="fontColor" id="fontColorList">
+            <option value="white" class="options">White</option>
+            <option value="tan" class="options">Tan</option>
+            <option value="bisque" class="options">Bisque</option>
+            <option value="plum" class="options">Plum</option>
         </select>
 
         <p>Podaj rozmiar czcionki w procentach, np. 200%</p>
-        <input type="text" value="100%">
+        <input type="text" value="100%" id="fontSize">
 
         <p>Czy rysunek ma mieć ramkę?</p>
         <input type="checkbox" checked> rysuj ramkę?
 
-        <p>Jaki jest typ punktora listy?</p>
-        <input type="radio" name="r1" id="r1"> dysk <br>
-        <input type="radio" name="r1" id="r2"> kwadrat <br>
-        <input type="radio" name="r1" id="r3"> okrąg <br>
+        <p> Jaki jest typ punktora listy? <br>
+            <input type="radio" name="r1" id="r1"> dysk <br>
+            <input type="radio" name="r1" id="r2"> kwadrat <br>
+            <input type="radio" name="r1" id="r3"> okrąg <br>
+        </p>
 
     </aside>
 
@@ -53,6 +54,8 @@
     <footer>
         Autor: PESEL
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
