@@ -1,0 +1,56 @@
+body {
+    font-family: Georgia;
+}
+
+aside {
+    background-color: maroon;
+    color: white;
+    height: 600px;
+    width: 30%;
+    float: left;
+}
+
+main {
+    background-color: maroon;
+    color: white;
+    height: 600px;
+    width: 70%;
+    overflow: auto;
+    float: left;
+}
+
+footer {
+    background-color: dimgray;
+    color: white;
+    clear: both;
+}
+
+img, ul {
+    float: left;
+}
+
+main p {
+    float: right;
+}
+
+p {
+    padding: 10px;
+}
+
+img {
+    padding: 10px;
+    border: 1px solid white;
+}
+
+#indigo {
+    background-color: indigo;
+}
+
+#steelBlue {
+    background-color: steelblue;
+}
+
+#olive {
+    background-color: olive;
+}
+
