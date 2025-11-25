@@ -1,6 +1,7 @@
 const indigoButton = document.querySelector('#indigo');
 const steelBlueButton = document.querySelector('#steelBlue');
 const oliveButton = document.querySelector('#olive');
+const backgroundColorButtons = document.querySelector('.backgroundColorButton');
 const main = document.querySelector('main');
 const mainImg = document.querySelector('#mainImg');
 const czyRamkaCheckBox = document.querySelector('#czyRamka');
