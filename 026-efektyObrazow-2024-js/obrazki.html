@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efekty obrazu</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    
+    <header>
+        <h2>Efekty na obrazach</h2>
+    </header>
+
+    <section id="sekcja1">
+        <img src="pszczola.jpg" alt="pszczola na fioletowym kwiatku" id="s1img"> <br>
+        <input type="radio" name="obraz1" id="blur"> Blur <br>
+        <input type="radio" name="obraz1" id="sepia"> Sepia <br>
+        <input type="radio" name="obraz1" id="negatyw"> Negatyw <br>
+        <button onclick="transformacja1();">Zastosuj</button>
+    </section>
+
+    <section id="sekcja2">
+        <img src="pomarancza.jpg" alt="drzewo pomaranczy" id="s2img"> <br>
+        <button onclick="transformacja2('kolor');">Kolorowy</button>
+        <button onclick="transformacja2('monochromatyk');">Czrno-bialy</button>
+    </section>
+
+    <section id="sekcja3">
+        <img src="owoce.jpg" alt="Kosz pełen owoców" id="s3img"> <br>
+        <input type="range" id="rangeInputS3" min="0" max="100" value="100"> <br>
+        <button onclick="transformacja3();">Zastosuj</button>
+    </section>
+
+    <section id="sekcja4">
+        <img src="zolw.jpg" alt="Żółw w wodzie" id="s4img"> <br>
+        <input type="range" id="rangeInputS4" min="0" max="250"> <br>
+        <button onclick="transformacja4();">Zastosuj</button>
+    </section>
+
+    <footer>
+        <p>
+            <a href="http://www.css.com/" target="_blank">Zobacz inne efekty obrazu</a>
+        </p>
+
+        <p>
+            Stronę wykonał: PESEL
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
