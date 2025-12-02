@@ -1,0 +1,4 @@
+Zapytanie 1: SELECT DISTINCT dane.imie FROM dane WHERE dane.imie LIKE '%a';
+Zapytanie 2: SELECT dane.imie, COUNT(*) as liczba_imion_meskich FROM dane WHERE dane.imie NOT LIKE '%a' GROUP BY dane.imie ORDER BY liczba_imion_meskich DESC limit 5;
+Zapytanie 3: SELECT dane.imie, COUNT(*) as liczba_takich_imion FROM dane JOIN wojewodztwa ON dane.id_woj = wojewodztwa.id WHERE wojewodztwa.id = 14 GROUP BY dane.imie;
+Zapytanie 4: SELECT DISTINCT dane.imie FROM dane WHERE dane.imie LIKE '___';

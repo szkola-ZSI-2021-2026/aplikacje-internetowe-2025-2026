@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    
+    <header>
+        <img src="baner.png" alt="grafika z logiem">
+    </header>
+
+    <main>
+        <p id="main-p">Egzamin</p>
+    </main>
+
+    <section id="left">
+        <label for="neon-text">Treść neonu</label>
+        <br>
+        <input type="text" maxlength="10" name="neon-text"  id="neon-text">
+        <br>
+        <button id="left-button">Zastosuj</button>
+    </section>
+
+    <section id="center">
+        <label for="neon-color">Kolor neonu</label>
+        <br>
+        <label for="R-color">R</label>
+        <input type="range" min="0" max="255" value="255" id="R-color" name="R-color" class="rangeInput">
+        <br>
+        <label for="G-color">G</label>
+        <input type="range" min="0" max="255" value="0" id="G-color" name="G-color" class="rangeInput">
+        <br>
+        <label for="B-color">B</label>
+        <input type="range" min="0" max="255" value="0" id="B-color" name="B-color" class="rangeInput">
+    </section>
+
+    <section id="right">
+        <label for="neon-size">Rozmiar neonu</label>
+        <br>
+        <input type="number" min="0" max="300" value="100" step="5" name="neon-size" id="neon-size">
+    </section>    
+
+    <footer>
+        <p>
+            <a href="styl.css" target="_blank">Otwórz plik ze stylami css</a>
+        </p>
+        <p>
+            Stronę wykonał: Mleczko
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
