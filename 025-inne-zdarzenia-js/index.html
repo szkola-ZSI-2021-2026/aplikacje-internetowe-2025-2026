@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inne zdarzenia JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>javascript przyklady zdarzen</h1>
+    <h2>Zdarzenia myszy</h2>
+    <div class="square" id="mouse" onclick="klik()" ondblclick="dbklik()" onmouseover="over()" onmouseout="out()">Najedz / Kliknij</div>
+
+    <p id="mouseInfo" class="info"></p>
+
+    <script>
+        function klik() {
+            document.querySelector('#mouseInfo').textContent = "Kliknięto element"
+            document.querySelector('#mouse').style.backgroundColor = "royalblue"
+
+        }
+        function dbklik() {
+            document.querySelector('#mouseInfo').textContent = 'podwojne klikniecie'
+            document.querySelector('#mouse').style.backgroundColor = 'orange'
+        }
+        function over() {
+            document.querySelector('#mouseInfo').textContent = 'Najechano kursorem'
+            document.querySelector('#mouse').style.transform = 'scale(1.1)'
+            
+        }
+        function out() {
+             document.querySelector('#mouseInfo').textContent = 'Kursor opuścił element'
+            document.querySelector('#mouse').style.transform = 'scale(1)'
+        }
+    </script>
+    <h2>Zdarzenia klawiatury</h2>
+    <input type="text" id="keyInput" placeholder="Wpisz coś ..." onkeydown="keyDown()" onkeypress="keyPress()" onkeyup="keyUp( )">
+    <p id="keyInfo" class="info"></p>
+    <script>
+        /*
+        onkeydown - wywolane gdy uzytkownik wcisnie klawisz 
+        onkeypress - wywolane gdy uzytkownik wpisze znak (klawisz wciśnięty i zwolniony)
+        onkeyup - wywołane gdy uzytkownik zwolni klawisz
+        */
+        function keyDown() {
+            document.querySelector('#keyInfo').textContent = 'Klawisz wciśnięty (key down)'
+        }
+        function keyPress() {
+            document.querySelector('#keyInfo').textContent = 'Znak wpisany'
+        }
+        // function keyUp() {
+        //     document.querySelector('#keyInfo').textContent = 'Klawisz zwolniony (key up)'
+        // }
+    </script>
+    <h2>Zdarzenia obiektów</h2>
+    <select id="list" onchange="change()">
+        <option value="crimson">czerwony</option>
+        <option value="gold">żłoty</option>
+        <option value="pink">różowy</option>
+    </select>
+    <p id="changeInfo" class="info"></p>
+    <input type="date" id="dateInput" oninput="dateInput()">
+    <p id="dateInfo" class="info"></p>
+
+    <input type="text" id="focus" placeholder="Kliknij Pole" onfocus='onfocusin()' onblur="blur()">
+    <p id="focusInfo" class="info"></p>
+
+    <p id="resizeInfo" class="info"></p>
+
+    <script>
+        /*
+            onload() - wywolane gdy strona lub element zostanie zaladowana
+            onresize() - wywolane gdy zmieni sie rozmiar okna przegladarki
+            onfocusin() - wywolane gdy element zyskuje focus
+            onfocusout() - wywolane gdy element traci focus
+            onblur() - wywolane gdy element traci aktywnosc
+            onchange() - wywolane gdy zmienia sie wartosc elementu, po dokonaniu zmiany
+            oninput() - wywolane gdy zmienia sie wartosc elementu i jest to natychmiastowe
+        */
+       window.onload = function() {
+        alert('strona została załadowana (onload)')
+       }
+
+       window.onresize = function() {
+        document.querySelector('#resizeInfo').textContent = "zmieniono rozmiar okna"
+
+       }
+       function change() {
+
+        document.body.style.backgroundColor = document.querySelector('#list').value
+
+       }
+       function dateInput() {
+        document.querySelector('#dateInfo').textContent = "Data: "+document.querySelector('#dateInput').value
+
+       }
+
+       function focusIn() {
+            document.querySelector('#focusInfo').textContent = 'pole aktywne'
+            document.querySelector('#focus').style.backgroundColor = 'blueviolet'
+       }
+
+       function blurFocus() {
+            document.querySelector('#focusInfo').textContent = 'pole stracilo aktywne'
+            document.querySelector('#focus').style.backgroundColor = 'navy'
+       }
+    </script>
+</body>
