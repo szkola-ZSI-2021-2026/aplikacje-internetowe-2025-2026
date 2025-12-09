@@ -1,0 +1,4 @@
+Zapytanie 1: Select id, imie, nazwisko, adres, miasto FROM pracownicy where id = 1;
+Zapytanie 2: Select imie, nazwisko FROM pracownicy where czyRODO = 0;
+Zapytanie 3: Select id, nazwisko FROM pracownicy  where czyBadania = 0 AND dataUr LIKE '197%'; 
+Zapytanie 4: 
