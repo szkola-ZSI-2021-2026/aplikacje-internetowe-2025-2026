@@ -10,6 +10,7 @@ function sendMessage(person, text) {
     div.appendChild(img);
     div.appendChild(p);
     chatBox.appendChild(div);
+    div.scrollIntoView();
 }
 
 let KrzysztofResponses = 
