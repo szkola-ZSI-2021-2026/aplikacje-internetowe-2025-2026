@@ -1,0 +1,81 @@
+* {
+    font-family: Garamond;
+}
+
+header {
+    background-color: tomato;
+    color: white;
+    text-align: center;
+    width: 80%;
+    height: 80px;
+    float: left;
+}
+
+main {
+    width: 80%;
+    height: 600px;
+    float: left;
+}
+
+section {
+    background-color: coral;
+    width: 20%;
+    height: 680px;
+    float: right;
+}
+
+footer {
+    background-color: tomato;
+    color: white;
+    text-align: center;
+    clear: both;
+}
+
+img {
+    border-radius: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#chat {
+    border: 1px solid tomato;
+    margin: 15px;
+    height: 470px;
+    overflow: scroll;
+}
+
+.messages {
+    border-radius: 5px;
+    width: 90%;
+    height: 70px;
+    margin: 2%;
+    padding: 3px;
+}
+
+.JolkaMessages {
+    background-color: #EEE;
+}
+
+.JolkaMessages img {
+    float: left;
+}
+
+.KrzysiekMessages {
+    background-color: #CCC;
+    text-align: right;
+}
+
+.KrzysiekMessages img {
+    float: right;
+}
+
+button {
+    background-color: tomato;
+    border: 1px solid darkred;
+    padding: 5px;
+    font-weight: bold;
+}
+
+input[type = 'text'] {
+    width: 500px;
+}

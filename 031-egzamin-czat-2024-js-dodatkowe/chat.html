@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header>
+        <h2>Chat</h2>
+    </header>
+
+    <section>
+        <h3>Chaty</h3>
+        <ul>
+            <li>Ogólny</li>
+            <li>Tematyczne
+                <ol>
+                    <li>Turystyczny</li>
+                    <li>Żeglarski</li>
+                    <li>Fialestyczny</li>
+                    <li>Hodowla zwierzątek domowych</li>
+                </ol>
+            </li>
+        </ul>
+        <h3>Uczestnicy</h3>
+        <p>Jolanta Nowak</p>
+        <img src="Jolka.jpg" alt="Jolanta Nowak">
+        <p>Krzysztof Łukasiński</p>
+        <img src="Krzysiek.jpg" alt="Krzysztof Łukasiński">
+    </section>
+    
+    <main>
+        <div id="chat">
+            <div class="messages JolkaMessages">
+                <img src="Jolka.jpg">
+                <p>Cześć idziesz jutro do kina?</p>
+            </div>
+
+            <div class="messages KrzysiekMessages">
+                <img src="Krzysiek.jpg">
+                <p>Tak!, A ty?</p>
+            </div>
+        </div>
+        <div id="controls">
+            Wpisz wiadomość:
+            <input type="text" id="typedMessage">
+            <button onclick="sendMessage('Jolka',document.querySelector('#typedMessage').value)">Wyślij</button>
+            <br>
+            <button onclick="generateRandomResponse('Krzysiek')">Generuj losową odpowiedź</button>
+        </div>
+    </main>
+
+    <footer>
+        <h5>Chat wykonał: PESEL</h5>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
